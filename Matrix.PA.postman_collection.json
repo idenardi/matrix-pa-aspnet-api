@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "f1f47790-4d9f-4661-bf22-fb8ed02cb243",
+		"name": "Matrix.PA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login - Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"admin\",\r\n    \"password\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4009/api/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImJiMjJhMDJhLThiYTEtNDQ0ZC05YWJkLWFhZTUxODJkZTJiYyIsIkFkbWluIjoiIiwiZXhwIjoxNjIwMDM1OTMyLCJpc3MiOiJNYXRyaXguUEEiLCJhdWQiOiJQb3N0bWFuIn0.NkisM2-__IZ03mGVkbtnpP3YHIandDABKAueaBQr4Ss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"username\": \"dev\",\r\n        \"password\": \"123\",\r\n        \"email\": \"dev@matrixsaude.com\",\r\n        \"isAdmin\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4009/api/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImJiMjJhMDJhLThiYTEtNDQ0ZC05YWJkLWFhZTUxODJkZTJiYyIsIkFkbWluIjoiIiwiZXhwIjoxNjIwMDM1OTMyLCJpc3MiOiJNYXRyaXguUEEiLCJhdWQiOiJQb3N0bWFuIn0.NkisM2-__IZ03mGVkbtnpP3YHIandDABKAueaBQr4Ss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4009/api/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImJiMjJhMDJhLThiYTEtNDQ0ZC05YWJkLWFhZTUxODJkZTJiYyIsIkFkbWluIjoiIiwiZXhwIjoxNjIwMDM1OTMyLCJpc3MiOiJNYXRyaXguUEEiLCJhdWQiOiJQb3N0bWFuIn0.NkisM2-__IZ03mGVkbtnpP3YHIandDABKAueaBQr4Ss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\" : 2,\r\n        \"username\": \"dev\",\r\n        \"password\": \"456\",\r\n        \"email\": \"developer@matrixsaude.com\",\r\n        \"isAdmin\": false\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4009/api/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImJiMjJhMDJhLThiYTEtNDQ0ZC05YWJkLWFhZTUxODJkZTJiYyIsIkFkbWluIjoiIiwiZXhwIjoxNjIwMDM1OTMyLCJpc3MiOiJNYXRyaXguUEEiLCJhdWQiOiJQb3N0bWFuIn0.NkisM2-__IZ03mGVkbtnpP3YHIandDABKAueaBQr4Ss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4009/api/User/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"User",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImJiMjJhMDJhLThiYTEtNDQ0ZC05YWJkLWFhZTUxODJkZTJiYyIsIkFkbWluIjoiIiwiZXhwIjoxNjIwMDM1OTMyLCJpc3MiOiJNYXRyaXguUEEiLCJhdWQiOiJQb3N0bWFuIn0.NkisM2-__IZ03mGVkbtnpP3YHIandDABKAueaBQr4Ss",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4009/api/User/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4009",
+					"path": [
+						"api",
+						"User",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
